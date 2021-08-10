@@ -1,3 +1,3 @@
 # MemeSnap
 
- Fastest Meme Generator
+Fastest Meme Generator
