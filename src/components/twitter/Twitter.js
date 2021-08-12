@@ -4,7 +4,7 @@ import html2canvas from "html2canvas";
 
 import { tweet } from "../../core/data/tweet";
 import "./twitter.css";
-import { getDate, timeStamp } from "../../core/utils";
+import { timeStamp } from "core/utils";
 import twitterDP from "../../assets/img/twitter.jpg";
 
 
