@@ -58,7 +58,7 @@ const Twitter = () => {
                         <p contentEditable>{tweet.post.text}</p>
                     </div>
                     <div className="time-and-date">
-                        <p><label contentEditable>{tweet.post.time}</label> &middot; {tweet.post.date} <span contentEditable>{tweet.post.device}</span></p>
+                        <p><label contentEditable>{tweet.post.time}</label> &middot; <label contentEditable>{tweet.post.date}</label> <span contentEditable>{tweet.post.device}</span></p>
                     </div>
                     <div className="bottom-section">
                         <svg viewBox="0 0 24 24" aria-hidden="true">

@@ -95,3 +95,8 @@ body {
 .bottom-section svg:hover {
     opacity: 1;
 }
+
+
+[contenteditable="true"]:hover {
+    outline: #c3d7de 2px solid;
+}
