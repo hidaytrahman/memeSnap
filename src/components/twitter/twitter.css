@@ -30,7 +30,6 @@ body {
     padding: 1rem 2rem;
     max-width: 400px;
     border-radius: 1.5rem;
-    user-select: none;
 }
 
 /* the title and the twitter handle */

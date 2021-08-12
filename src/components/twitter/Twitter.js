@@ -50,15 +50,15 @@ const Twitter = () => {
                     <div className="title">
                         <img src={tweet.photo} alt="tweet" src={imgSrc} onError={onError} />
                         <div className="info">
-                            <h4 className="name">{tweet.name}</h4>
-                            <p className="twitter-handle">{tweet.username}</p>
+                            <h4 className="name" contentEditable>{tweet.name}</h4>
+                            <p className="twitter-handle" contentEditable>{tweet.username}</p>
                         </div>
                     </div>
                     <div className="tweet">
-                        <p>{tweet.post.text}</p>
+                        <p contentEditable>{tweet.post.text}</p>
                     </div>
                     <div className="time-and-date">
-                        <p>{tweet.post.time} &middot; {tweet.post.date} <span>{tweet.post.device}</span></p>
+                        <p><label contentEditable>{tweet.post.time}</label> &middot; {tweet.post.date} <span contentEditable>{tweet.post.device}</span></p>
                     </div>
                     <div className="bottom-section">
                         <svg viewBox="0 0 24 24" aria-hidden="true">
