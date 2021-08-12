@@ -12,3 +12,10 @@
 .btn-save {
     margin-top: 1rem;
 }
+
+.custom-input {
+
+    input[type=file] {
+        display: none;
+    }
+}

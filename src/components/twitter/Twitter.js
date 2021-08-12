@@ -13,14 +13,14 @@ const Twitter = () => {
     const [imgSrc, setImgSrc] = useState(fallback);
     const onError = () => setImgSrc(fallback);
 
-    console.log(' timeStamp ',timeStamp);
+    console.log(' timeStamp ', timeStamp);
     const onButtonClick = useCallback(() => {
 
         html2canvas(document.querySelector(".tweet-container")).then(canvas => {
 
             // convert image with base64
             const img = canvas.toDataURL();
- 
+
             // Downloadable image
             const link = document.createElement('a');
             link.href = img;
@@ -41,24 +41,29 @@ const Twitter = () => {
 
     return (
         <>
-
-            <input id="fileItem" type="file" onChange={handleChange} />
-
             <section className="twitter-wrapper">
 
                 <div className="tweet-container">
                     <div className="title">
-                        <img src={tweet.photo} alt="tweet" src={imgSrc} onError={onError} />
+
+                        <div className="profile-wrapper">
+                            <img src={tweet.photo} alt="tweet" src={imgSrc} onError={onError} />
+                            <div className="custom-input">
+                                <label htmlFor="fileItem">📷</label>
+                                <input id="fileItem" type="file" onChange={handleChange} />
+                            </div>
+                        </div>
+
                         <div className="info">
-                            <h4 className="name" contentEditable>{tweet.name}</h4>
-                            <p className="twitter-handle" contentEditable>{tweet.username}</p>
+                            <h4 className="name" contentEditable="true" suppressContentEditableWarning >{tweet.name}</h4>
+                            <p className="twitter-handle" contentEditable={true} suppressContentEditableWarning >{tweet.username}</p>
                         </div>
                     </div>
                     <div className="tweet">
-                        <p contentEditable>{tweet.post.text}</p>
+                        <p contentEditable suppressContentEditableWarning >{tweet.post.text}</p>
                     </div>
                     <div className="time-and-date">
-                        <p><label contentEditable>{tweet.post.time}</label> &middot; <label contentEditable>{tweet.post.date}</label> <span contentEditable>{tweet.post.device}</span></p>
+                        <p><label contentEditable suppressContentEditableWarning >{tweet.post.time}</label> &middot; <label contentEditable suppressContentEditableWarning >{tweet.post.date}</label> <span contentEditable suppressContentEditableWarning >{tweet.post.device}</span></p>
                     </div>
                     <div className="bottom-section">
                         <svg viewBox="0 0 24 24" aria-hidden="true">
