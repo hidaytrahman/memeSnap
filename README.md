@@ -1,1 +1,3 @@
-# memeSnap
+# MemeSnap
+
+Fastest Meme Generator
