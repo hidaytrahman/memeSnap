@@ -16,11 +16,11 @@
 }
 
 body {
-    position: absolute;
+    /* position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background-color: var(--background-color);
+    background-color: var(--background-color); */
     font-family: var(--font);
 }
 
@@ -30,6 +30,7 @@ body {
     padding: 1rem 2rem;
     max-width: 400px;
     border-radius: 1.5rem;
+
 }
 
 /* the title and the twitter handle */

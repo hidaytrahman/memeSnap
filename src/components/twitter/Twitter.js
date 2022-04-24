@@ -47,7 +47,7 @@ const Twitter = () => {
                     <div className="title">
 
                         <div className="profile-wrapper">
-                            <img src={tweet.photo} alt="tweet" src={imgSrc} onError={onError} />
+                            <img src={imgSrc || tweet.photo} alt="tweet"  onError={onError} />
                             <div className="custom-input">
                                 <label htmlFor="fileItem">📷</label>
                                 <input id="fileItem" type="file" onChange={handleChange} />
@@ -72,6 +72,7 @@ const Twitter = () => {
                                 </path>
                             </g>
                         </svg>
+                       
                         <svg viewBox="0 0 24 24" aria-hidden="true">
                             <g>
                                 colo
@@ -97,7 +98,7 @@ const Twitter = () => {
                 </div>
 
                 <div>
-                    <button className="btn btn-primary btn-save" onClick={onButtonClick}>Save</button>
+                    <button className="btn btn-primary btn-save" onClick={onButtonClick}>Download</button>
                 </div>
 
             </section>
