@@ -5,10 +5,14 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-          <h1>Memer</h1>
+          <h1>MemeSnap</h1>
+          <h2>Generate memes of social media post</h2>
       </header>
 
-      <Twitter />
+      <section>
+        <Twitter />
+      </section>
+      
       
     </div>
   );
