@@ -47,7 +47,7 @@ const Twitter = () => {
                     <div className="title">
 
                         <div className="profile-wrapper">
-                            <img src={tweet.photo} alt="tweet" src={imgSrc} onError={onError} />
+                            <img src={imgSrc || tweet.photo} alt="tweet" onError={onError} />
                             <div className="custom-input">
                                 <label htmlFor="fileItem">📷</label>
                                 <input id="fileItem" type="file" onChange={handleChange} />
