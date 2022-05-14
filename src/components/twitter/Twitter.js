@@ -6,6 +6,7 @@ import { tweet } from "../../core/data/tweet";
 import "./twitter.css";
 import { timeStamp } from "core/utils";
 import twitterDP from "../../assets/img/twitter.jpg";
+import { Flex, StyledButton } from "components/styled/Core.styles";
 
 
 const Twitter = () => {
@@ -96,9 +97,9 @@ const Twitter = () => {
                     </div>
                 </div>
 
-                <div>
-                    <button className="btn btn-primary btn-save" onClick={onButtonClick}>Save</button>
-                </div>
+                <Flex alignItems="center" justifyContent="flex-end" style={{maxWidth: '400px'}}>
+                    <StyledButton margin="5px" onClick={onButtonClick}>Download</StyledButton>
+                </Flex>
 
             </section>
         </>

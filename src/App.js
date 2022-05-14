@@ -8,47 +8,40 @@ import {
 import Logo from 'components/entity/logo/Logo';
 import './App.css';
 import Twitter from './components/twitter/Twitter';
-
-function Home() {
-  return <h2>Home</h2>;
-}
-
-function About() {
-  return <h2>About</h2>;
-}
-
-function Users() {
-  return <h2>Users</h2>;
-}
+import Landing from "components/pages/landing/Landing";
+import { ThemeProvider } from "styled-components";
+import { theme } from "core/theme";
 
 
 const App = () => {
   return (
     <BrowserRouter>
 
-      <div className="App"> 
-        <Logo />
+      <div className="App">
+
+      <Link to="/"><Logo /></Link>
+
         <header className="App-header">
           <h2>Generate memes of social media post</h2>
         </header>
 
+        <ThemeProvider theme={theme}>
 
-        <Routes>
-          <Route exact path="/" element={<h1>Home Page</h1>} />
-          <Route exact path="page1" element={<Home />} />
-          <Route exact path="page2" element={<About />} />
-        </Routes>
+          <section>
+            <Routes>
+              <Route exact path="/" element={<Landing />} />
+              <Route exact path="twitter" element={<Twitter />} />
+            </Routes>
 
-        <section>
-          <Twitter />
-        </section>
+          </section>
+
+        </ThemeProvider>
+
 
 
       </div>
 
     </BrowserRouter>
-
-
   );
 }
 
