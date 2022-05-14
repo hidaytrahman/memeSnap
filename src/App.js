@@ -15,7 +15,7 @@ import { theme } from "core/theme";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/memeSnap">
 
       <div className="App">
 
