@@ -5,7 +5,7 @@ export const Landing = () => {
 
     return <>
 
-        <Flex >
+        <Flex>
             <Card background="yellow">
                     <h3>Twitter</h3>
                     <p>Create twitter tweet meme</p>
